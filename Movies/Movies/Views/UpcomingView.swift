@@ -10,7 +10,7 @@ struct UpcomingView: View {
         }
         .foregroundStyle(.white)
         .background{
-            Image("gambino")
+            Image("interstellar")
                 .resizable()
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
