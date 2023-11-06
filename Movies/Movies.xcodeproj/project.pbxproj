@@ -14,6 +14,7 @@
 		DA58CCC52AF7C0320018E481 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA58CCC42AF7C0320018E481 /* Assets.xcassets */; };
 		DA58CCC82AF7C0320018E481 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA58CCC72AF7C0320018E481 /* Preview Assets.xcassets */; };
 		DA58CCD02AF7C4200018E481 /* UpcomingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58CCCF2AF7C4200018E481 /* UpcomingView.swift */; };
+		DA5AF7BD2AF950210036D50B /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5AF7BC2AF950210036D50B /* MoviesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		DA58CCC42AF7C0320018E481 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA58CCC72AF7C0320018E481 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DA58CCCF2AF7C4200018E481 /* UpcomingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingView.swift; sourceTree = "<group>"; };
+		DA5AF7BC2AF950210036D50B /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 			children = (
 				DA58CCC02AF7C02F0018E481 /* MoviesApp.swift */,
 				DA35193B2AF7D8D60001332D /* Models.swift */,
+				DA5AF7BC2AF950210036D50B /* MoviesViewModel.swift */,
 				DA35193D2AF7DA880001332D /* Networking */,
 				DA58CCCE2AF7C4060018E481 /* Views */,
 				DA58CCC42AF7C0320018E481 /* Assets.xcassets */,
@@ -163,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA35193F2AF7DA9C0001332D /* Network.swift in Sources */,
+				DA5AF7BD2AF950210036D50B /* MoviesViewModel.swift in Sources */,
 				DA58CCC32AF7C02F0018E481 /* ContentView.swift in Sources */,
 				DA58CCC12AF7C02F0018E481 /* MoviesApp.swift in Sources */,
 				DA58CCD02AF7C4200018E481 /* UpcomingView.swift in Sources */,
