@@ -4,7 +4,7 @@ struct UpcomingView: View {
     @StateObject private var viewModel = MoviesViewModel()
     var body: some View {
         VStack(spacing: 5) {
-            Title(title: "UPCOMING")
+            //Title(title: "UPCOMING")
             List(viewModel.movies){ movie in
                 HStack {
                     Poster(url: movie.posterURL!)
@@ -35,6 +35,8 @@ struct UpcomingView: View {
             .scrollContentBackground(.hidden)
             .background(.clear)
         }
+        .frame(maxHeight: .infinity)
+        .searchable(text: $viewModel.searchQuerry)
         .onAppear(perform: {
             viewModel.loadData()
         })
