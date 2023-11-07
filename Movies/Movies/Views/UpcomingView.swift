@@ -3,27 +3,37 @@ import SwiftUI
 struct UpcomingView: View {
     @StateObject private var viewModel = MoviesViewModel()
     var body: some View {
-        VStack {
-            Text("UPCOMING")
-                .font(.system(size: 40, weight: .bold, design: .serif))
-                .foregroundStyle(.red)
+        VStack(spacing: 5) {
+            Title(title: "UPCOMING")
             List(viewModel.movies){ movie in
                 HStack {
                     Poster(url: movie.posterURL!)
+                    Spacer()
                     VStack(alignment: .leading) {
                         Text(movie.title)
                             .font(.system(size: 20, weight: .bold, design: .serif))
+                            .lineLimit(2)
                             .foregroundStyle(Color("deepblue"))
                         Text(movie.overview)
-                            .lineLimit(3)
+                            .font(.system(size: 18, weight: .bold, design: .serif))
+                            .lineLimit(4)
+                    }
+                    .padding(9)
+                    .background{
+                        RoundedRectangle(cornerRadius: 5)
+                            .fill(.white)
                     }
                 }
+                .listRowBackground(
+                    RoundedRectangle(cornerRadius: 5)
+                        .fill(Color(white: 1, opacity: 0.5))
+                        .padding(5)
+                )
                 .listRowSeparator(.hidden)
-                .listRowBackground(Color("glassMaterial"))
+                .listRowBackground(Color.clear)
             }
             .scrollContentBackground(.hidden)
             .background(.clear)
-            Spacer()
         }
         .onAppear(perform: {
             viewModel.loadData()
@@ -32,6 +42,7 @@ struct UpcomingView: View {
             Image("interstellar")
                 .resizable()
                 .scaledToFill()
+                .blur(radius: 2)
                 .edgesIgnoringSafeArea(.all)
         }
     }

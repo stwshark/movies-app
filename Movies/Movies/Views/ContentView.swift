@@ -10,10 +10,10 @@ struct ContentView: View {
                     NavigationLink(destination: UpcomingView()) {
                         CustomNavigationTitle(text: "Upcoming movies")
                     }
-                    NavigationLink(destination: UpcomingView()) {
+                    NavigationLink(destination: MovieView()) {
                         CustomNavigationTitle(text: "Best rated")
                     }
-                    NavigationLink(destination: UpcomingView()) {
+                    NavigationLink(destination: MovieView()) {
                         CustomNavigationTitle(text: "Search")
                     }
                 }
@@ -37,15 +37,6 @@ struct ContentView: View {
     }
 }
 
-struct Title: View {
-    let title: String
-    var body: some View {
-        Text(title)
-            .font(.system(size: 40, weight: .bold, design: .serif))
-            .foregroundStyle(.red)
-    }
-}
-
 struct CustomNavigationTitle: View {
     let text: String
     var body: some View {
@@ -65,6 +56,16 @@ struct CustomNavigationTitle: View {
             RoundedRectangle(cornerRadius: 15)
                 .fill(Color("deepblue"))
         }
+    }
+}
+
+public struct Title: View {
+    let title: String
+    public var body: some View {
+        Text(title)
+            .font(.system(size: 40, weight: .bold, design: .serif))
+            .foregroundStyle(.red)
+            .multilineTextAlignment(.center)
     }
 }
 
